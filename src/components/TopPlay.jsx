@@ -58,7 +58,7 @@ const TopPlay = () => {
             />
           </div>
 
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </div>
     </section>
