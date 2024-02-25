@@ -122,6 +122,34 @@ const SignUpButtons = () => {
   );
 };
 
+const NavItems = () => {
+  const navigate = useNavigate();
+  return (
+    <div className="flex items-center gap-0 px-4">
+      <Button
+        label="Djs"
+        onClick={() => navigate("/")}
+        className="!text-onNeutralBg !border-onNeutralBg"
+      />
+      <Button
+        label="Beats"
+        onClick={() => navigate("/")}
+        className="!text-onNeutralBg !border-onNeutralBg"
+      />
+      <Button
+        label="Podcasts"
+        onClick={() => navigate("/")}
+        className="!text-onNeutralBg !border-onNeutralBg"
+      />
+      <Button
+        label="Feed"
+        onClick={() => navigate("/")}
+        className="!text-onNeutralBg !border-onNeutralBg"
+      />
+    </div>
+  );
+};
+
 const notificationList = [
   {
     id: "1",
@@ -372,11 +400,8 @@ const Logo = ({ isFolded, isHorizontal }) => {
               : ""
           }
         >
-          <Icon
-            name={logo.icon}
-            size={25}
-            className={showFull ? "!text-white" : "!text-primary"}
-          />
+          <img src={logo.icon} alt="Logo" className="h-8 w-8" />
+          
         </div>
 
         <h1
@@ -430,7 +455,7 @@ export default function Navbar() {
                   <UserMenu />
                 </>
               ) : (
-                <SignUpButtons />
+                <div className="flex items-center"><NavItems/><SignUpButtons /></div>
               )}
             </div>
           ) : null}
